@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-"""
-This is the "Say My Name" module.
-The Say My Name module takes one required parameter and one optional.
-It prints "My name is (first) (last)" where (first) and (last) are the args.
-"""
+"""Defines a name-printing function."""
 
 
 def say_my_name(first_name, last_name=""):
-    """Print My name is (first) (last) if given, else print error.
+    """Print a name.
+    Args:
+        first_name (str): The first name to print.
+        last_name (str): The last name to print.
+    Raises:
+        TypeError: If either of first_name or last_name are not strings.
     """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
